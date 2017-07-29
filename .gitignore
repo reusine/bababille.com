@@ -2,6 +2,7 @@
 /.sass-cache/
 /bin/
 /bower_components/
+/Gemfile.lock
 /lib/
 /node_modules/
 /public/
