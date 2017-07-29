@@ -1,0 +1,8 @@
+/.bundle/
+/.sass-cache/
+/bin/
+/bower_components/
+/lib/
+/node_modules/
+/public/
+/var/

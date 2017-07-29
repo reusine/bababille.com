@@ -1,0 +1,15 @@
+{
+  "name": "bababille",
+  "version": "0.0.0",
+  "main": "public/css/style.css",
+  "ignore": [
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "~4",
+    "fontawesome": "~4",
+    "jQuery": "~3",
+    "tether": "~1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,51 @@
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  top: 0;
+  height: $header-height;
+  border-width: 0;
+  border-style: solid;
+  border-color: #000;
+  background-color: rgba($color-one-lead, .9);
+  > div {
+    @include make-container();
+    @include media-breakpoint-up(md) { @include make-container-max-widths(); }
+    nav {
+      @include make-row();
+      @extend .navbar;
+      @extend .navbar-light;
+      padding: 0;
+      border-width: 0;
+      border-radius: 0;
+      background-color: transparent;
+      height: $header-height;
+      > div {
+        @include make-col-ready();
+        @include make-col(12);
+        #logo {
+          @extend .navbar-brand;
+          display: inline;
+          margin: 0;
+          font-family: $font-title;
+	  font-weight: lighter;
+          line-height: $header-height;
+          font-size: 2.5rem;
+	  color: rgba(#fff, 1);
+	  &:hover {
+	    color: #fff;
+	  }
+        }
+        p {
+          display: inline;
+          line-height: $header-height;
+          margin: 0;
+          padding: 0;
+          font-family: $font-title;
+          font-size: 2rem;
+	  color: rgba(#fff, .7);
+        }
+      }
+    }
+  }
+}

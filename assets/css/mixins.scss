@@ -1,0 +1,30 @@
+@mixin animated-transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin media-map-up($property, $xs, $sm, $md, $lg, $xl) {
+  @include media-breakpoint-up(xs) { #{$property}: $xs }
+  @include media-breakpoint-up(sm) { #{$property}: $sm }
+  @include media-breakpoint-up(md) { #{$property}: $md }
+  @include media-breakpoint-up(lg) { #{$property}: $lg }
+  @include media-breakpoint-up(xl) { #{$property}: $xl }
+}
+
+@mixin grayscale($level) {
+  -webkit-filter: grayscale($level);
+  -moz-filter: grayscale($level);
+  -ms-filter: grayscale($level);
+  -o-filter: grayscale($level);
+  filter: grayscale($level);
+  //filter: gray; /* IE 6-9 */
+}
+
+@mixin make-css-columns($columns) {
+  column-count: $columns;
+  -moz-column-count: $columns;
+  -webkit-column-count: $columns;
+}

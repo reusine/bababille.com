@@ -1,0 +1,16 @@
+{
+  "name": "bababille.fr",
+  "version": "0.0.0",
+  "description": "bababille.fr website",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "bower": "^1.8.0",
+    "font-awesome": "^4",
+    "uglify-js": "^2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": "",
+  "author": "Benoit Bryon",
+  "license": "BSD"
+}

@@ -1,0 +1,248 @@
+body#index {
+  section {
+    > div {
+      @include make-container();
+      @include media-breakpoint-up(lg) { @include make-container-max-widths(); }
+    }
+  }
+  section#tagline {
+    position: relative;
+    background-color: $color-body-bg;
+    color: $color-one-title;
+    > div {
+      > div {
+        @include make-row();
+	img {
+	  display: block;
+	  position: absolute;
+	  top: -40px;
+          @include media-map-up(width, 20px, 40px, 60px, 120px, 150px);
+	  z-index: 0;
+	}
+        blockquote {
+          @include make-col-ready();
+          @include make-col(10);
+          @include make-col-offset(2);
+	  position: relative;
+	  text-shadow: -1px 1px 0px rgba(black, 0.5);
+	  z-index: 1;
+          @include media-map-up(padding-top, 2rem, 2.5rem, 3rem, 3.5rem, 4rem);
+          font-family: $font-title;
+          @include media-map-up(font-size, 1rem, 1rem, 1.4rem, 1.5rem, 1.8rem);
+          line-height: 2em;
+          .excerpt {
+            @include media-map-up(font-size, 1.5rem, 2rem, 2.5rem, 3rem, 3.5rem);
+          }
+        }
+      }
+    }
+  }
+  section#benefits {
+    > div {
+      > div {
+        @include make-row();
+        article {
+          @include make-col-ready();
+          @include media-breakpoint-up(md) { @include make-col(3); }
+	  &:first-child {
+            @include media-breakpoint-up(md) { @include make-col-offset(2); }
+	  }
+          div {
+            h2 {
+              line-height: 1rem;
+              margin: 0 auto;
+	      padding-bottom: .5rem;
+	      span {
+	        display: block;
+	      }
+              color: $color-one-title;
+              @include media-map-up(text-align, left, left, center, center, center);
+              img {
+	        display: block;
+                margin: 0 auto;
+	        width: 96px;
+	      }
+              .action {
+                @include media-map-up(font-size, 1.4rem, 1.7rem, 1.7rem, 2rem, 2rem);
+                line-height: 1.1em;
+              }
+            }
+            p {
+	      text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  section#products {    
+    background-color: #f0f0f0;
+    > div {
+      > div {
+        @include make-row();
+	img {
+          @include media-breakpoint-up(md) { float: left; }
+          margin: 0 20px 0 0;
+          width: 3rem;
+        }
+	article {
+	  border-style: solid;
+	  border-color: #e0e0e0;
+	  border-radius: 5px;
+	  border-width: 1px;
+	  padding: 5px;
+	  background-color: #ffffff;
+	  p {
+	    margin: 0 auto;
+	  }
+	}
+	article.main {
+	  padding: 10px;
+          @include make-col-ready();
+          @include media-breakpoint-up(md) { @include make-col(7); }
+          h2 {
+            @include media-map-up(font-size, 1rem, 1rem, 1.4rem, 1.5rem, 2rem);
+            margin: 0 auto;
+            padding: 0;
+            line-height: 3rem;
+          }
+	  p {
+            line-height: 1.5rem;
+	  }
+          img {
+            width: 6rem;
+          }
+	}
+	.others {
+          @include make-col-ready();
+          @include media-breakpoint-up(md) { @include make-col(5); }
+          article {
+            clear: both;
+            h2 {
+              @include media-map-up(font-size, 1.1rem, 1.2rem, 1.2rem, 1.3rem, 1.4rem);
+              margin: 0 auto;
+              padding: 0;
+              line-height: 1.7rem;
+            }
+	    p {
+	      line-height: 1.3rem;
+	    }
+          }
+	}
+      }
+    }
+  }
+  section#call {
+    padding-bottom: 3rem;
+    > div {
+      > div {
+        @include make-row();
+        article {
+          @include make-col-ready();
+          @include media-breakpoint-up(md) { @include make-col(12); }
+	  text-align: center;
+          h2 {
+            margin: 0 auto .5em auto;
+            padding: 0;
+            line-height: 1.2em;
+	    font-family: $font-standard;
+	    font-weight: lighter;
+            @include media-map-up(font-size, 1.1rem, 1.2rem, 1.2rem, 1.3rem, 1.4rem);
+	  }
+	  a {
+            @extend .btn;
+            @extend .btn-primary; 
+            @extend .btn-lg; 
+	    font-family: $font-title;
+            @include media-map-up(font-size, 2rem, 2.5rem, 3rem, 3.5rem, 4rem);
+	    background-color: #22bce3;
+	    border-color: #225ce3;
+	    border-style: groove;
+	    border-width: 1px;
+	    &:hover {
+	      background-color: #225ce3;
+	      border-color: #15398c;
+	      border-style: ridge;
+	    }
+	    img {
+	      height: 1em;
+	    }
+	  }
+	}
+      }
+    }
+  }
+  section#contact {
+    background-color: #f0f0f0;
+    padding-top: 5rem;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg
+             xmlns='http://www.w3.org/2000/svg'
+             width='100'
+	     height='100'
+	     viewBox='0 0 100 100'
+	     preserveAspectRatio='none'%3E
+        %3Cpolygon points='0,0 50,100 100,0' style='fill:%23ffffff%3B' /%3E
+      %3C/svg%3E
+    ");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 4rem;
+    color: #303030;
+    a {
+      text-decoration: none;
+      border-style: dotted;
+      border-width: 0 0 1px 0;
+      &:hover {
+        border-style: solid;
+        border-color: rgba($color-three-text, 0.8);
+      }
+    }
+    > div {
+      > div {
+        article {
+          @include make-row();
+	  h2 {
+            @include make-col-ready(); 
+            @include make-col(12);
+	    @include media-map-up(font-size, 2rem, 2rem, 2rem, 2.5rem, 3rem);
+	  }
+          div.meet {
+            @include make-col-ready(); 
+            @include media-breakpoint-up(md) { @include make-col(6); }
+	    font-size: 0.9rem;
+          }
+	  div.call {
+            @include make-col-ready(); 
+            @include media-breakpoint-up(md) { @include make-col(6); }
+	    img {
+	      @include media-breakpoint-up(md) { float: left; }
+	      border-width: 0px;
+	      border-color: #000;
+	      border-style: solid;
+	      margin: 0 20px 30px 0;
+	      width: 150px;
+              box-shadow: -1px 1px 2px rgba(black, 0.5);
+	    }
+	    h3 {
+	      @include media-map-up(font-size, 1.2rem, 1.3rem, 1.4rem, 1.5rem, 1.5rem);
+	    }
+	    p {
+	      margin: 0 auto 0.5rem auto;
+	    }
+	  }
+	  .team {
+            @include make-col-ready(); 
+            @include media-breakpoint-up(md) { @include make-col(10); }
+	    img {
+	      float: left;
+	      margin-right: 20px;
+	    }
+	    p {
+	      margin-top: 2rem;
+	    }
+	  }
+        }
+      }
+    }
+  }
+}

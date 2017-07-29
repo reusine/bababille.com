@@ -1,0 +1,35 @@
+footer {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #aaa;
+  background-color: rgba($color-one-lead, 1);
+  color: rgba($color-one-text, .8);
+  @include make-container();
+  > div {
+    @include make-container();
+    @include media-breakpoint-up(lg) { @include make-container-max-widths(); }
+    > div {
+      @include make-row();
+      p {
+        line-height: $footer-height;
+        font-size: 1rem;
+        margin: 0 auto;
+        font-family: $font-title;
+        @include make-col-ready();
+        @include media-breakpoint-up(lg) { @include make-col(6); }
+	a {
+	  color: #999;
+	}
+	&.contacts {
+	  text-align: right;
+	}
+      }
+    }
+  }
+}

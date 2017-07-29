@@ -1,0 +1,16 @@
+/* Global settings. */
+@import "fonts";
+@import "theme";
+
+/* Libraries. */
+@import "../../bower_components/fontawesome/scss/font-awesome";
+@import "../../bower_components/bootstrap/scss/bootstrap";
+
+/* Specific stuff. */
+@import "mixins";
+@import "general";
+@import "header";
+@import "footer";
+
+/* Pages. */
+@import "index";
