@@ -1,3 +1,7 @@
+tags:
+  - debian
+  - jessie
+
 image: .
 
 pages:
