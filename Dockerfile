@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:jessie
 
 RUN apt-get update
 
