@@ -5,7 +5,7 @@ pages:
   - shared
   before_script:
   - apt-get update
-  - apt-get install -y npm bundler
+  - apt-get install -y nodejs npm bundler
   - make develop
   script: 
   - make public
