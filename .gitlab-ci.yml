@@ -1,4 +1,4 @@
-image: travisci/ci-python
+image: debian:jessie
 
 pages:
   tags:
