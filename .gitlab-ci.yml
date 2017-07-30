@@ -4,6 +4,7 @@ pages:
   tags:
   - Debian
   - Jessie
+  - shared
   script:
   - make public
   artifacts:
