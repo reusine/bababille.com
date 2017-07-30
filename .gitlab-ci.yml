@@ -1,10 +1,9 @@
-tags:
-  - debian
-  - jessie
-
 image: .
 
 pages:
+  tags:
+  - debian
+  - jessie
   script:
   - make public
   artifacts:
