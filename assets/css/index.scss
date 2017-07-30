@@ -2,22 +2,22 @@ body#index {
   section {
     > div {
       @include make-container();
-      @include media-breakpoint-up(lg) { @include make-container-max-widths(); }
+      @include media-breakpoint-up(md) { @include make-container-max-widths(); }
     }
   }
   section#tagline {
-    position: relative;
     background-color: $color-body-bg;
     color: $color-one-title;
     > div {
       > div {
+        position: relative;
         @include make-row();
 	img {
-	  display: block;
-	  position: absolute;
-	  top: -40px;
-          @include media-map-up(width, 20px, 40px, 60px, 120px, 150px);
-	  z-index: 0;
+          display: block;
+          position: absolute;
+          @include media-map-up(top, -30px, -30px, -40px, -40px, -40px);
+          @include media-map-up(width, 70px, 90px, 110px, 130px, 150px);
+          z-index: 0;
 	}
         blockquote {
           @include make-col-ready();
@@ -25,13 +25,13 @@ body#index {
           @include make-col-offset(2);
 	  position: relative;
 	  text-shadow: -1px 1px 0px rgba(black, 0.5);
-	  z-index: 1;
+          z-index: 1;
           @include media-map-up(padding-top, 2rem, 2.5rem, 3rem, 3.5rem, 4rem);
           font-family: $font-title;
-          @include media-map-up(font-size, 1rem, 1rem, 1.4rem, 1.5rem, 1.8rem);
+          @include media-map-up(font-size, 1.3rem, 1.5rem, 1.4rem, 1.5rem, 1.8rem);
           line-height: 2em;
           .excerpt {
-            @include media-map-up(font-size, 1.5rem, 2rem, 2.5rem, 3rem, 3.5rem);
+            @include media-map-up(font-size, 2rem, 3rem, 2.5rem, 3rem, 3.5rem);
           }
         }
       }
@@ -43,32 +43,37 @@ body#index {
         @include make-row();
         article {
           @include make-col-ready();
-          @include media-breakpoint-up(md) { @include make-col(3); }
+          @include media-breakpoint-up(md) { @include make-col(4); }
+          @include media-breakpoint-up(lg) { @include make-col(3); }
 	  &:first-child {
-            @include media-breakpoint-up(md) { @include make-col-offset(2); }
+            @include media-breakpoint-up(lg) { @include make-col-offset(2); }
 	  }
           div {
+            @include media-map-up(text-align, left, left, center, center, center);
             h2 {
               line-height: 1rem;
               margin: 0 auto;
-	      padding-bottom: .5rem;
 	      span {
 	        display: block;
 	      }
               color: $color-one-title;
               @include media-map-up(text-align, left, left, center, center, center);
               img {
-	        display: block;
+                display: block;
                 margin: 0 auto;
-	        width: 96px;
+                @include media-map-up(margin-right, 15px, 20px, auto, auto, auto);
+                @include media-map-up(width, 4rem, 4rem, 96px, 96px, 96px);
+                @include media-map-up(float, left, left, none, none, none);
 	      }
               .action {
                 @include media-map-up(font-size, 1.4rem, 1.7rem, 1.7rem, 2rem, 2rem);
-                line-height: 1.1em;
+                line-height: 1.2em;
+	        @include media-map-up(padding, .5rem 0 0 0, .5rem 0 0 0, 0 0 0 0, 0 0 .5rem 0, 0 0 .5rem 0);
               }
             }
             p {
-	      text-align: center;
+              @include media-map-up(font-size, 1rem, 1rem, .9rem, .9rem, 1rem);
+              @include media-map-up(line-height, 1rem, 1rem, 1rem, 1rem, 1rem);
             }
           }
         }
@@ -81,43 +86,52 @@ body#index {
       > div {
         @include make-row();
 	img {
-          @include media-breakpoint-up(md) { float: left; }
-          margin: 0 20px 0 0;
+          display: block;
+          margin: 0 auto;
+          margin-right: 1rem;
+	  float: left;
           width: 3rem;
         }
 	article {
-	  border-style: solid;
-	  border-color: #e0e0e0;
-	  border-radius: 5px;
-	  border-width: 1px;
-	  padding: 5px;
-	  background-color: #ffffff;
-	  p {
-	    margin: 0 auto;
-	  }
-	}
-	article.main {
-	  padding: 10px;
+          border-style: solid;
+          border-color: #e0e0e0;
+          border-radius: 5px;
+          border-width: 1px;
+          padding: 5px;
+          background-color: #ffffff;
+          p {
+            margin: 0 auto;
+            @include media-map-up(font-size, .9rem, .9rem, .9rem, .9rem, 1rem);
+            padding-left: 4rem;
+          }
+        }
+        .main {
           @include make-col-ready();
           @include media-breakpoint-up(md) { @include make-col(7); }
-          h2 {
-            @include media-map-up(font-size, 1rem, 1rem, 1.4rem, 1.5rem, 2rem);
-            margin: 0 auto;
-            padding: 0;
-            line-height: 3rem;
+	  article {
+            @include media-map-up(padding, .5rem, .5rem, 10px, 10px, 10px);
+            @include media-map-up(min-height, 7rem, 7rem, 100%, 100%, 100%);
+            h2 {
+              @include media-map-up(font-size, 1.4rem, 1.4rem, 1.4rem, 1.5rem, 1.8rem);
+              margin: 0 auto;
+              padding: 0 0 .5rem 0;
+              line-height: 2rem;
+            }
+            p {
+              line-height: 1.5rem;
+              padding-left: 7rem;
+            }
+            img {
+              width: 6rem;
+            }
           }
-	  p {
-            line-height: 1.5rem;
-	  }
-          img {
-            width: 6rem;
-          }
-	}
+        }
 	.others {
           @include make-col-ready();
           @include media-breakpoint-up(md) { @include make-col(5); }
           article {
             clear: both;
+	    min-height: 50%;
             h2 {
               @include media-map-up(font-size, 1.1rem, 1.2rem, 1.2rem, 1.3rem, 1.4rem);
               margin: 0 auto;
@@ -215,12 +229,12 @@ body#index {
             @include make-col-ready(); 
             @include media-breakpoint-up(md) { @include make-col(6); }
 	    img {
-	      @include media-breakpoint-up(md) { float: left; }
+	      float: left;
 	      border-width: 0px;
 	      border-color: #000;
 	      border-style: solid;
 	      margin: 0 20px 30px 0;
-	      width: 150px;
+              @include media-map-up(width, 120px, 120px, 120px, 150px, 150px);
               box-shadow: -1px 1px 2px rgba(black, 0.5);
 	    }
 	    h3 {
@@ -231,14 +245,19 @@ body#index {
 	    }
 	  }
 	  .team {
+	    clear: both;
+	    margin-top: 1rem;
             @include make-col-ready(); 
-            @include media-breakpoint-up(md) { @include make-col(10); }
+            @include make-col(12);
+            @include media-breakpoint-up(lg) { @include make-col(10); }
 	    img {
 	      float: left;
+	      width: 120px;
 	      margin-right: 20px;
 	    }
 	    p {
-	      margin-top: 2rem;
+	      margin-top: 1rem;
+              padding-left: 140px;
 	    }
 	  }
         }
