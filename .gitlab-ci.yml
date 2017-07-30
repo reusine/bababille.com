@@ -4,6 +4,7 @@ pages:
   tags:
   - shared
   before_script:
+  - apt-get update
   - apt-get install -y nodejs-dev ruby-dev
   script: 
   - make public
