@@ -1,9 +1,10 @@
-image: debian:jessie
+image: python:latest
 
 pages:
   tags:
   - shared
   script:
+  - apt-get install -y nodejs ruby-full
   - make public
   artifacts:
     paths:
