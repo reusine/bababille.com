@@ -1,0 +1,8 @@
+image: .
+
+pages:
+  script:
+  - make public
+  artifacts:
+    paths:
+    - public/
