@@ -24,14 +24,15 @@ body#index {
           @include make-col(10);
           @include make-col-offset(2);
 	  position: relative;
-	  text-shadow: -1px 1px 0px rgba(black, 0.5);
           z-index: 1;
           @include media-map-up(padding-top, 2rem, 2.5rem, 3rem, 3.5rem, 4rem);
           font-family: $font-title;
           @include media-map-up(font-size, 1.3rem, 1.5rem, 1.4rem, 1.5rem, 1.8rem);
-          line-height: 2em;
+          line-height: 1.1em;
           .excerpt {
+            margin-top: .5rem;
             @include media-map-up(font-size, 2rem, 3rem, 2.5rem, 3rem, 3.5rem);
+            line-height: 1.2em;
           }
         }
       }
@@ -81,7 +82,7 @@ body#index {
     }
   }
   section#products {    
-    background-color: #f0f0f0;
+    background-color: #637187;
     > div {
       > div {
         @include make-row();

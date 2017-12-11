@@ -7,7 +7,7 @@ header {
   border-width: 0;
   border-style: solid;
   border-color: #000;
-  background-color: rgba($color-one-lead, .9);
+  background-color: rgba($color-one-lead, 1);
   > div {
     @include make-container();
     @include media-breakpoint-up(md) { @include make-container-max-widths(); }
